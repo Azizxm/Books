@@ -1,0 +1,25 @@
+Class Diagram
+Classes:
+Book
+
+Attributes:
+title: String
+author: String
+isbn: String
+numPages: int
+Methods:
+getters and setters for all attributes
+toString(): String (for printing book details)
+Library
+
+Attributes:
+name: String
+location: String
+books: ArrayList<Book>
+Methods:
+addBook(book: Book): void
+removeBook(isbn: String): void
+findBookByTitle(title: String): Book
+Relationships:
+Book ↔ Library: Aggregation (Library has an ArrayList of Books)
+Library → Book: Dependency (Library uses Book instances)
